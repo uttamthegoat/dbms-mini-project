@@ -51,12 +51,15 @@ exports.adminLogin = async (req, res, next) => {
     password,
     existingAdmin.password
   );
+  // if(existingAdmin.password !== password){
+  //   return res.status(400).json({ message: "Incorrect Password" });
+  // }
 
   if (!isPasswordCorrect) {
     return res.status(400).json({ message: "Incorrect Password" });
   }
 
-  const token = jwt.sign({ id: existingAdmin._id }, process.env.SECRET_KEY, {
+  const token = jwt.sign({ id: existingAdmin._id }, "usuhdsv", {
     expiresIn: "14d",
   });
 

@@ -21,11 +21,12 @@ const Header = () => {
   const isAdminLoggedIn = useSelector((state) => state.admin.isLoggedIn);
   const isUserLoggedIn = useSelector((state) => state.user.isLoggedIn);
   const [selectedMocvie, setSelectedMovie] = useState();
-  const [movies, setMovies] = useState([])
-  const [value, setValue] = useState(0);
+  const [movies, setMovies] = useState([]);
+  // const [value, setValue] = useState(1);
   useEffect(() => {
-    getAllMovies().then((data) => setMovies(data.movies))
-      .catch((err) => console.log(err))
+    getAllMovies()
+      .then((data) => setMovies(data.movies))
+      .catch((err) => console.log(err));
   }, []);
 
   const logout = (isAdmin) => {
@@ -56,31 +57,29 @@ const Header = () => {
               <TextField
                 variant="standard"
                 {...params}
-
                 sx={{
                   borderRadius: 2,
                   input: { color: "white" },
                   bgcolor: "#2b2d42",
                   padding: "6px",
                 }}
-
                 placeholder="Search Movies"
 
-              //   InputProps={{
-              //     ...params.InputProps,
-              //     type: "search",
-              //   }}
+                //   InputProps={{
+                //     ...params.InputProps,
+                //     type: "search",
+                //   }}
               />
             )}
           />
         </Box>
         <Box display="flex">
           <Tabs
-            onChange={(e, val) => setValue(val)}
-            value={value}
+            // onChange={(e, val) => setValue(val)}
+            // value={value}
             textColor="inherit"
+            // textcolor="inherit"
           >
-
             <Tab LinkComponent={Link} to="/movies" label="Movies"></Tab>
             {!isAdminLoggedIn && !isUserLoggedIn && (
               <div>
@@ -89,7 +88,7 @@ const Header = () => {
               </div>
             )}
             {isUserLoggedIn && (
-              <>
+              <div>
                 <Tab label="Profile" LinkComponent={Link} to="/user" />
                 <Tab
                   onClick={() => logout(false)}
@@ -97,10 +96,10 @@ const Header = () => {
                   LinkComponent={Link}
                   to="/"
                 />
-              </>
+              </div>
             )}
             {isAdminLoggedIn && (
-              <>
+              <div>
                 <Tab label="Add Movie" LinkComponent={Link} to="/add" />
                 <Tab label="Profile" LinkComponent={Link} to="/user-admin" />
                 <Tab
@@ -109,7 +108,7 @@ const Header = () => {
                   LinkComponent={Link}
                   to="/"
                 />
-              </>
+              </div>
             )}
           </Tabs>
         </Box>

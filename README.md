@@ -1,9 +1,9 @@
 # ShowPulse
-![front part of app](https://github.com/Akash-298/fullstack-movie-booking-app/assets/105929312/9787ee17-78b8-40e7-9b60-7126d9e1e895)
+<!-- ![front part of app](https://github.com/Akash-298/fullstack-movie-booking-app/assets/105929312/9787ee17-78b8-40e7-9b60-7126d9e1e895)
 ![Screenshot 2023-09-27 084227](https://github.com/Akash-298/fullstack-movie-booking-app/assets/105929312/5e144d98-b221-4ce8-a2ba-1b09bf61233b)
 
 ![Screenshot 2023-09-27 084610](https://github.com/Akash-298/fullstack-movie-booking-app/assets/105929312/66952644-5ce6-42da-8848-ea05fb2f366a)
-![Screenshot 2023-09-27 084859](https://github.com/Akash-298/fullstack-movie-booking-app/assets/105929312/22e97e9e-c5f7-4910-8a71-e6e9b6711629)
+![Screenshot 2023-09-27 084859](https://github.com/Akash-298/fullstack-movie-booking-app/assets/105929312/22e97e9e-c5f7-4910-8a71-e6e9b6711629) -->
 
 
 
@@ -67,16 +67,9 @@ Getting your development environment set up is fairly straightforward:
 - Axios
 - ES6
 
-## Contributing
+## Contributors
 
-Contributions are welcome! If you'd like to contribute to this project.
-
-## Contact Information
-
-If you have any questions, feedback, or would like to get in touch, please reach out to:
-
-- Akash Chikhalonde
-- Email: akash.c.c298@gmail.com
-- GitHub: https://github.com/Akash-298
-
-
+- Sushmitha Loknath
+- Suveeksha Shetty
+- Uttam
+- Vipul Nayak

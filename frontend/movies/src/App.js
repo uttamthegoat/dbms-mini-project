@@ -12,7 +12,6 @@ import UserProfile from "./Profile/UserProfile";
 import AddMovie from "./components/Movies/AddMovie";
 import AdminProfile from "./Profile/AdminProfile";
 
-
 function App() {
   const dispatch = useDispatch();
   const isAdminLoggedIn = useSelector((state) => state.admin.isLoggedIn);
@@ -29,35 +28,32 @@ function App() {
   return (
     <div>
       <Header />
-       <section> 
+      <section>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<Movies />} />
-          {!isUserLoggedIn  && !isAdminLoggedIn &&(<>
-             <Route path="/admin" element={<Admin />} />
-             <Route path="/auth" element={<Auth />} />
-             </>
+          {!isUserLoggedIn && !isAdminLoggedIn && (
+            <>
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/auth" element={<Auth />} />
+            </>
           )}
 
-{
-  isUserLoggedIn  && !isAdminLoggedIn &&(<>
-  <Route path="/booking/:id" element={<Booking />} />
-          <Route path="/user" element={<UserProfile />} />
-           </>
+          {isUserLoggedIn && !isAdminLoggedIn && (
+            <>
+              <Route path="/booking/:id" element={<Booking />} />
+              <Route path="/user" element={<UserProfile />} />
+            </>
           )}
 
-{
-  !isUserLoggedIn  && isAdminLoggedIn &&(<>
-  <Route path="/add" element={<AddMovie />} />
-          <Route path="/user-admin" element={<AdminProfile />} />
-              </>
+          {!isUserLoggedIn && isAdminLoggedIn && (
+            <>
+              <Route path="/add" element={<AddMovie />} />
+              <Route path="/user-admin" element={<AdminProfile />} />
+            </>
           )}
-
-         
-         
-          
         </Routes>
-      </section> 
+      </section>
     </div>
   );
 }
