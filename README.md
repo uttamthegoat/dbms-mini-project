@@ -1,12 +1,4 @@
 # ShowPulse
-<!-- ![front part of app](https://github.com/Akash-298/fullstack-movie-booking-app/assets/105929312/9787ee17-78b8-40e7-9b60-7126d9e1e895)
-![Screenshot 2023-09-27 084227](https://github.com/Akash-298/fullstack-movie-booking-app/assets/105929312/5e144d98-b221-4ce8-a2ba-1b09bf61233b)
-
-![Screenshot 2023-09-27 084610](https://github.com/Akash-298/fullstack-movie-booking-app/assets/105929312/66952644-5ce6-42da-8848-ea05fb2f366a)
-![Screenshot 2023-09-27 084859](https://github.com/Akash-298/fullstack-movie-booking-app/assets/105929312/22e97e9e-c5f7-4910-8a71-e6e9b6711629) -->
-
-
-
 
 ## Table of Contents
 - [Project Description](#project-description)
@@ -34,10 +26,6 @@ Learned how to implement features such as user authentication, admin functionali
 - Performance-optimized design
 - And much more!
 
-## Demo
-
-- [Demo Video 1](insert_demo_video_url_1_here)
-- [Demo Video 2](insert_demo_video_url_2_here)
 
 ## Installation
 
