@@ -1,6 +1,6 @@
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
-// const Bookings =require("../models/Bookings");
+const Bookings =require("../models/Bookings");
 exports.getAllUsers = async (req, res, next) => {
   let users;
   try {

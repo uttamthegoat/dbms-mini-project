@@ -3,12 +3,10 @@
 ## Table of Contents
 - [Project Description](#project-description)
 - [Features](#features)
-- [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [Contact Information](#contact-information)
+- [Contributors](#contributors)
 
 
 ## Project Description

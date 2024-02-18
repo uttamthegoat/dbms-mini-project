@@ -62,7 +62,11 @@ export const newBooking = async (data) => {
       date: data.date,
       user: localStorage.getItem("userId"),
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      const { message } = err.response.data;
+      console.log(err);
+      alert(message);
+    });
 
   if (res.status !== 201) {
     return console.log("Unexpected Error");
@@ -92,7 +96,7 @@ export const deleteBooking = async (id) => {
   if (res.status !== 200) {
     return console.log("Unepxected Error");
   }
-
+  alert(res.data.message);
   const resData = await res.data;
   return resData;
 };

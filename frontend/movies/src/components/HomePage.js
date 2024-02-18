@@ -13,12 +13,13 @@ const HomePage = () => {
   }, []);
   return (
     <Box width={"100%"} height="100%" margin="auto" marginTop={2}>
-      <Box margin={"auto"} width="80%" height={"40vh"} padding={2}>
+      <Box margin={"auto"} width="60%" padding={2}>
         <img
-          src="https://i.ytimg.com/vi/bweRG6WueuM/maxresdefault.jpg"
+          src="https://assets-in.bmscdn.com/discovery-catalog/events/et00301886-aqakbqsyqf-landscape.jpg"
           alt="Brahmastra"
           width={"100%"}
           height={"100%"}
+          title="Salaar"
         />
       </Box>
       <Box padding={5} margin="auto">

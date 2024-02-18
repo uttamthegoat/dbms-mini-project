@@ -9,14 +9,13 @@ exports.addMovie = async (req, res, next) => {
     if (!extractedToken && extractedToken.trim() === "") {
       return res.status(404).json({ message: "Token Not Found" });
     }
-  
-
-  let adminId;
-
-  // verify token
-  jwt.verify(extractedToken, process.env.SECRET_KEY, (err, decrypted) => {
+    
+    let adminId;
+    
+    // verify token
+    jwt.verify(extractedToken, process.env.SECRET_KEY, (err, decrypted) => {
     if (err) {
-      return res.status(400).json({ message: `${err.message}` });
+      return res.status(400).json({ message: `Error${err.message}` });
     } else {
       adminId = decrypted.id;
       return;
@@ -48,15 +47,15 @@ exports.addMovie = async (req, res, next) => {
       posterUrl,
       title,
     });
-    const session = await mongoose.startSession();
+    // const session = await mongoose.startSession();
     const adminUser = await Admin.findById(adminId);
-    session.startTransaction();
-    await movie.save({ session });
-    adminUser.addedMovies.push(movie);
-    await adminUser.save({ session });
-    await session.commitTransaction();
+    // session.startTransaction();
+    await movie.save();
+    adminUser.addedMovies.push(movie._id);
+    await adminUser.save();
+    // await session.commitTransaction();
   } catch (err) {
-    return console.log(err);
+    console.log(err);
   }
 
   if (!movie) {

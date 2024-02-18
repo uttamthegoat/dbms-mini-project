@@ -13,6 +13,20 @@ const bookingSchema = new mongoose.Schema({
   seatNumber: {
     type: Number,
     required: true,
+    unique:true,
+    min: 1, // Minimum value for seatNumber
+    max: 200, // Maximum value for seatNumber
+    validate: {
+      validator: async function (value) {
+        const existingBooking = await this.constructor.findOne({
+          movie: this.movie,
+          seatNumber: value,
+        });
+
+        return !existingBooking;
+      },
+      message: 'Seat is already booked for this movie.',
+    },
   },
   user: {
     type: mongoose.Types.ObjectId,

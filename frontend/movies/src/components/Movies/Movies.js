@@ -9,7 +9,6 @@ const Movies = () => {
     getAllMovies()
       .then((data) => {
         setMovies(data.movies);
-        console.log(data.movies);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -31,7 +30,7 @@ const Movies = () => {
         margin="auto"
         marginTop={5}
         display={"flex"}
-        justifyContent="flex-start"
+        justifyContent="center"
         flexWrap={"wrap"}
       >
         {movies &&
