@@ -32,6 +32,7 @@ Getting your development environment set up is fairly straightforward:
 1. Clone the repository to your local machine.
 2. Install Node.js and MongoDB if you haven't already.
 3. Run `npm install` to install project dependencies.
+4. Create a `.env` file and add the `SECRET_KEY` value.
 
 ## Usage
 
