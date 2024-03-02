@@ -33,7 +33,9 @@ import { addMovie } from "../../api-helpers/api-helpers";
       e.preventDefault();
       console.log(inputs, actors);
       addMovie({ ...inputs, actors })
-        .then((res) => console.log(res))
+        .then((res) => {
+          alert("Movie has been successfully added!")
+        })
         .catch((err) => console.log(err));
     };
     return (
