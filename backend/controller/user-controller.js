@@ -130,6 +130,8 @@ exports.getBookingsOfUser = async (req, res, next) => {
   }
   return res.status(200).json({ bookings });
 };
+
+
 exports.getUserById = async (req, res, next) => {
   const id = req.params.id;
   let user;

@@ -20,18 +20,13 @@ mongoose
   )
   .catch((e) => console.log(e));
 
-// middlewears
+// middlewares
 app.use(cors());
 app.use(express.json())
 app.use("/user", userRouter);
 app.use("/admin", adminRouter);
 app.use("/movie", movieRouter);
 app.use("/booking", bookingsRouter);
-
-
-
-
-
 
 app.listen(5000, () =>
   console.log("Connected To Database And Server is running")

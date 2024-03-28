@@ -49,16 +49,17 @@ const Booking = () => {
               marginRight={"auto"}
             >
               <img
-                width="80%"
-                height={"300px"}
+                width="350px"
+                height={"auto"}
                 src={movie.posterUrl}
                 alt={movie.title}
+                style={{display:"block", margin:"auto"}}
               />
               <Box width={"80%"} marginTop={3} padding={2}>
                 <Typography paddingTop={2}>{movie.description}</Typography>
                 <Typography fontWeight={"bold"} marginTop={1}>
                   Starrer:
-                  {movie.actors.map((actor) => " " + actor + " ")}
+                  {movie.actors.map((actor) => " " + actor + ", ")}
                 </Typography>
                 <Typography fontWeight={"bold"} marginTop={1}>
                   Release Date: {new Date(movie.releaseDate).toDateString()}

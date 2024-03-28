@@ -3,7 +3,7 @@ const { deleteBooking, getBookingById, newBooking } =require("../controller/book
 
 const bookingsRouter = express.Router();
 
-bookingsRouter.get("/:id", getBookingById);
+// bookingsRouter.get("/:id", getBookingById);
 bookingsRouter.post("/", newBooking);
 bookingsRouter.delete("/:id", deleteBooking);
 module.exports = bookingsRouter;
